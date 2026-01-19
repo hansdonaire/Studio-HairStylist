@@ -1,0 +1,442 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #fafafa;
+  color: #333;
+  line-height: 2.0;
+}
+
+.hero {
+  height: 163vh;
+  background-image: url("https://i.pinimg.com/736x/d7/4d/ae/d74daecce1b5de2e54e0e0af66ebef21.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #771313;
+
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(23, 20, 70);
+}
+
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif; /*fonte*/
+    margin-top: 20rem;    /* distância acima do título */
+  margin-bottom: 15px; /* distância abaixo do título */
+  padding-left: 15px;  /* distância do texto até a borda esquerda do container */
+  color: #111;
+  font-size: 4rem;
+}
+
+
+.hero-content p {
+  
+  font-size: 1.0rem;
+   margin-top: 1rem;    /* distância acima do título */
+  margin-bottom: 30px; /* distância abaixo do título */
+  padding-left: 15px;  /* distância do texto até a borda esquerda do container */
+  color: #111;
+  font-size: 3rem;
+}
+
+.btn-primary {
+  margin-top: 2rem;    /* distância acima do título */
+  display: inline-block;
+  padding: 15px 50px;
+  background: #111;
+  color: #1eeb2f;
+  text-decoration: none;
+  border-radius: 35px;
+  transition: .3s;
+}
+
+.btn-primary:hover {
+  background: #333;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.bg-light {
+  background: #f2f2f2;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* LISTA */
+.lista-check li {
+  list-style: none;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.lista-check li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #111;
+}
+
+/* SERVIÇOS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.00);
+  transition: transform .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* GALERIA PREMIUM */
+.galeria-vertical {
+  column-count: 9; /* Número de colunas lado a lado */
+  column-gap: 50px; /* Espaço entre as colunas */
+}
+
+.galeria-vertical img {
+  width: 150%; /* imagem ocupa toda largura da coluna */
+  margin-bottom: 5px; /* espaço entre imagens na mesma coluna */
+  border-radius: 16px;
+  display: flex;
+  box-shadow: 0 20px 50px rgba(230, 8, 8, 0.15);
+
+  
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .galeria-vertical {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-vertical {
+    column-count: 2;
+  }
+}
+
+
+
+/* LIGHTBOX */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+#close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* FORM */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: grid;
+  gap: 15px;
+}
+
+input, select, button {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #111;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+/* MAPA */
+iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* BOTÕES SOCIAIS FIXOS (METADE DO TAMANHO) */
+.social-float {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.btn-social {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,.35);
+  transition: transform .3s ease;
+}
+
+.btn-social svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* WHATSAPP */
+.btn-social.whatsapp {
+  background: #25D366;
+}
+
+/* INSTAGRAM */
+.btn-social.instagram {
+  background: linear-gradient(45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+}
+
+.btn-social:hover {
+  transform: scale(1.12);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .btn-social {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-social svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+/* CARROSSEL INFINITO */
+.carrossel-infinito {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+}
+
+.carrossel-track {
+  display: flex;
+  gap: 16px;
+  animation: scroll 30s linear infinite;
+}
+
+.carrossel-track img {
+  width: 260px;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  transition: transform .3s ease;
+  cursor: pointer;
+}
+
+.carrossel-track img:hover {
+  transform: scale(1.05);
+}
+
+/* Animação infinita */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pausa no hover */
+.carrossel-track:hover {
+  animation-play-state: paused;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .carrossel-track img {
+    width: 200px;
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carrossel-track img {
+    width: 160px;
+    height: 200px;
+  }
+}
+/* =========================
+   MOBILE FIRST (ATÉ 768px)
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    line-height: 1.6;
+  }
+
+  /* HERO */
+  .hero {
+    height: 100vh;
+    padding: 20px;
+    background-position: center top;
+  }
+
+  .hero-content h1 {
+    margin-top: 8rem;
+    font-size: 2.2rem;
+    padding-left: 0;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
+    padding-left: 0;
+  }
+
+  .btn-primary {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+
+  /* CONTAINER */
+  .container {
+    padding: 40px 16px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* SERVIÇOS */
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .card {
+    padding: 20px;
+    font-size: .95rem;
+  }
+
+  /* FORM */
+  form {
+    width: 100%;
+  }
+
+  input, select, button {
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  /* MAPA */
+  iframe {
+    height: 220px;
+  }
+
+  /* GALERIA */
+  .galeria-vertical {
+    column-count: 2;
+    column-gap: 12px;
+  }
+
+  .galeria-vertical img {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  /* CARROSSEL */
+  .carrossel-track {
+    animation-duration: 40s;
+  }
+
+  .carrossel-track img {
+    width: 150px;
+    height: 200px;
+  }
+
+  /* BOTÕES SOCIAIS */
+  .social-float {
+    right: 10px;
+  }
+
+  .btn-social {
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn-social svg {
+    width: 16px;
+    height: 16px;
+  }
+}
